@@ -1,9 +1,6 @@
 package com.example.capstone.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,10 +10,12 @@ import java.util.List;
 @Entity  //DB가 해당 객체 인식 가능   (해당 클래스로 테이블을 만듬)
 @ToString
 @Getter
+@Setter
 
 public class Group_tbl {
     @Id  //대표값 like 주민번호
     @GeneratedValue(strategy = GenerationType.IDENTITY) // db가 알아서 생성
+    @Column(name = "group_id")
     private Long id;
 
     @Column (unique = true)
@@ -28,6 +27,6 @@ public class Group_tbl {
     @Column
     private String matched_schedule;
 
-    @OneToMany(mappedBy = "group_tbl")
-    private List<User_group> user_groups  ;
+//    @OneToMany(mappedBy = "group_tbl")
+//    private List<User_group> user_groups  ;
 }

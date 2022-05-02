@@ -6,7 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public interface UserRepository extends CrudRepository<User, Long>  {
 
@@ -17,9 +16,9 @@ public interface UserRepository extends CrudRepository<User, Long>  {
     @Query(value =
             "select * " +
                     "from user " +
-                    "where user_id = :user_id",
+                    "where user_login_id = :user_login_id",
             nativeQuery = true) //true로 해줘야 해당sql 동작
-    User findOneByUser_id(@Param("user_id")String user_id);
+    User findByUser_login_id(@Param("user_login_id")String user_login_id);
 
 
     @Query(value =
