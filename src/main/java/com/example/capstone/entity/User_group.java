@@ -10,7 +10,7 @@ import javax.persistence.*;
 @ToString
 @Getter
 @Setter
-@Table (name = "user_group")
+@Table(name = "user_group")
 public class User_group {
 
     @Id  //대표값 like 주민번호
@@ -28,8 +28,6 @@ public class User_group {
 
     @Column
     private String shared_schedule;
-
-
 
 
 }

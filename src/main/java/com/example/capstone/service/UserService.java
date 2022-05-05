@@ -225,6 +225,8 @@ public class UserService {
         userGroupRepository.delete(user_group_created);
         return user_group_created;
     }
+
+
 }
 
 //    public List<User_group> Group_list(Long user_id) {

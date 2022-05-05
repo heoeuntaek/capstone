@@ -3,8 +3,6 @@ package com.example.capstone.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @AllArgsConstructor  //생성자
 @NoArgsConstructor  //default생성자 추가
@@ -31,8 +29,8 @@ public class User {
 //   @OneToMany(mappedBy = "user")
 //   private List<User_group> user_groups = new ArrayList<>();
 
-   @OneToMany(mappedBy = "user")
-   private List<Schedule> schedules = new ArrayList<>();
+//   @OneToMany(mappedBy = "user")
+//   private List<Schedule> schedules = new ArrayList<>();
 
    public void patch(User user) {
 

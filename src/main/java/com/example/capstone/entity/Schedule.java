@@ -1,9 +1,6 @@
 package com.example.capstone.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -12,14 +9,16 @@ import javax.persistence.*;
 
 @ToString
 @Getter
+@Setter
 @Table (name = "schedule")
 @Entity  //DB가 해당 객체 인식 가능   (해당 클래스로 테이블을 만듬)
 public class Schedule {
     @Id  //대표값 like 주민번호
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // db가 알아서 생성
+    @GeneratedValue(strategy = GenerationType.AUTO) // db가 알아서 생성
+    @Column(name = "schedule_id")
     private Long id;
 
-    @Column(columnDefinition = "json")
+    @Column(length = 5000)
     private String schedule_data;
 
     @Column

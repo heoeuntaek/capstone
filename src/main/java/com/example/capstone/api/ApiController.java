@@ -2,11 +2,10 @@ package com.example.capstone.api;
 
 import com.example.capstone.dto.UserDto;
 import com.example.capstone.entity.Group_tbl;
+import com.example.capstone.entity.Schedule;
 import com.example.capstone.entity.User;
 import com.example.capstone.entity.User_group;
-import com.example.capstone.repository.ScheduleRepository;
-import com.example.capstone.repository.UserGroupRepository;
-import com.example.capstone.repository.UserRepository;
+import com.example.capstone.service.ScheduleService;
 import com.example.capstone.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,18 +19,11 @@ import java.util.List;
 @RestController
 public class ApiController {
 
-
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private UserGroupRepository userGroupRepository;
-
-    @Autowired
-    private ScheduleRepository schedultRepository;
-
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private ScheduleService scheduleService;
 
 
     @GetMapping("/api/users")
@@ -121,6 +113,22 @@ public class ApiController {
     public ResponseEntity<User_group> DeleteuserGroup(@PathVariable Long user_id, @PathVariable Long group_id) {
         User_group user_group = userService.DeleteuserGroup(user_id, group_id);
         return ResponseEntity.status(HttpStatus.OK).body(user_group);
+    }
+
+    //스케줄
+
+    @PostMapping("api/schedule/{user_id}")
+    public ResponseEntity<Schedule> CreateSchedule(@PathVariable Long user_id, @RequestBody Schedule schedule) {
+        Schedule schedulesave = scheduleService.CreateSchedule(user_id, schedule);
+//        log.info("스케줄 생성 성공{}", schedulesave.toString());
+        return ResponseEntity.status(HttpStatus.OK).body(schedulesave);
+    }
+
+    //스케줄 1개 리스트
+    @GetMapping("api/{user_id}/{schedule_id}")
+    public ResponseEntity<Schedule> GetSchedule(@PathVariable Long user_id, @PathVariable Long schedule_id) {
+        Schedule schedule = scheduleService.GetSchedule(user_id, schedule_id);
+        return ResponseEntity.status(HttpStatus.OK).body(schedule);
     }
 
 }
