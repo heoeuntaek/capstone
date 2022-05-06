@@ -29,5 +29,9 @@ public class Schedule {
     @JoinColumn(name = "userId") //  테이블에서 대상정보의 colum
     private User user;
 
+    @ManyToOne //해당 댓글 엔티티 여러개가, 다대일관계
+    @JoinColumn(name = "groupId") //  테이블에서 대상정보의 colum
+    private Group_tbl group_tbl;
+
 
 }
