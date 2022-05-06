@@ -139,6 +139,28 @@ public class ApiController {
         return ResponseEntity.status(HttpStatus.OK).body(schedules);
     }
 
+    //스케줄 공유
+    @PatchMapping("api/schedule/{group_id}/{schedule_id}/{user_id}")
+    public ResponseEntity<Schedule> UpdateScheduleWithGroup(@PathVariable Long group_id, @PathVariable Long schedule_id, @PathVariable Long user_id) {
+        Schedule schedule = scheduleService.UpdateScheduleWithGroup(group_id, schedule_id, user_id);
+        return ResponseEntity.status(HttpStatus.OK).body(schedule);
+    }
+
+    //공유스케줄 조회
+    @GetMapping("api/schedule/{user_id}/{group_id}")
+    public ResponseEntity<Schedule> GetScheduleWithGroup(@PathVariable Long user_id, @PathVariable Long group_id) {
+        Schedule schedule = scheduleService.GetScheduleWithGroup(user_id, group_id);
+        return ResponseEntity.status(HttpStatus.OK).body(schedule);
+    }
+
+    // 그룹 id로 스케줄리스트
+    @GetMapping("api/schedules/group/{group_id}")
+    public ResponseEntity<List<Schedule>> GetScheduleListWithGroup(@PathVariable Long group_id) {
+        List<Schedule> schedules = scheduleService.GetScheduleListWithGroup(group_id);
+        log.info("스케줄 리스트 조회 성공{}", schedules.toString());
+        return ResponseEntity.status(HttpStatus.OK).body(schedules);
+    }
+
 }
 
 
