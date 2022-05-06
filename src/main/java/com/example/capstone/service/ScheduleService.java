@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Slf4j
 @Service
 public class ScheduleService {
@@ -31,6 +33,17 @@ public class ScheduleService {
         Schedule schedule_found = scheduleRepository.findById(schedule_id).orElse(null);
         schedule_found.setUser(user_found);
         return schedule_found;
+
+    }
+
+    public List<Schedule> GetScheduleList(Long user_id) {
+
+        User user_found = userRepository.findById(user_id).orElse(null);
+
+        //user_id 1개의 대한 그룹들
+        List<Schedule> schedule_list = scheduleRepository.findByUser_id(user_id);
+
+        return schedule_list;
 
     }
 }

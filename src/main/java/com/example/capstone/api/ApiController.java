@@ -131,6 +131,14 @@ public class ApiController {
         return ResponseEntity.status(HttpStatus.OK).body(schedule);
     }
 
+    //스케줄 리스트
+    @GetMapping("api/schedules/{user_id}")
+    public ResponseEntity<List<Schedule>> GetScheduleList(@PathVariable Long user_id) {
+        List<Schedule> schedules = scheduleService.GetScheduleList(user_id);
+        log.info("스케줄 리스트 조회 성공{}", schedules.toString());
+        return ResponseEntity.status(HttpStatus.OK).body(schedules);
+    }
+
 }
 
 
