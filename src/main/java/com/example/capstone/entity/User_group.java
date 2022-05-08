@@ -27,7 +27,7 @@ public class User_group {
 
 
     @Column
-    private String shared_schedule;
+    private String matched_schedule;
 
 
 }

@@ -5,6 +5,7 @@ import com.example.capstone.entity.Group_tbl;
 import com.example.capstone.entity.Schedule;
 import com.example.capstone.entity.User;
 import com.example.capstone.entity.User_group;
+import com.example.capstone.service.GroupService;
 import com.example.capstone.service.ScheduleService;
 import com.example.capstone.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -24,6 +25,9 @@ public class ApiController {
 
     @Autowired
     private ScheduleService scheduleService;
+
+    @Autowired
+    private GroupService groupService;
 
 
     @GetMapping("/api/users")
@@ -160,6 +164,19 @@ public class ApiController {
         log.info("스케줄 리스트 조회 성공{}", schedules.toString());
         return ResponseEntity.status(HttpStatus.OK).body(schedules);
     }
+    //
+    @PatchMapping("api/group/matchedSchedule/{group_id}")
+    public ResponseEntity<Group_tbl> UpdateMatchedSchedule(@PathVariable Long group_id, @RequestBody Group_tbl group_tbl) {
+        Group_tbl group_tblsave = groupService.UpdateMatchedSchedule(group_id, group_tbl);
+        log.info("그룹 조회 성공{}", group_tblsave.toString());
+        return ResponseEntity.status(HttpStatus.OK).body(group_tblsave);
+    }
+
+    @GetMapping("api/group/matchedSchedule/{group_id}")
+    public ResponseEntity<Group_tbl> GetMatchedSchedule(@PathVariable Long group_id) {
+        Group_tbl group_tbl = groupService.GetMatchedSchedule(group_id);
+        return ResponseEntity.status(HttpStatus.OK).body(group_tbl);
+    }
 
 }
 
@@ -171,6 +188,7 @@ public class ApiController {
 //        User created = userService.create(dto);
 //        return ResponseEntity.status(HttpStatus.OK).body(created);
 //@PatchMapping("/api/articles/{id}")
+
 //public ResponseEntity<User> update(@PathVariable Long id,  // responseEntity - 상태코드 실을수있음
 //                                      //response Entity 에 Article이 담겨서 들어감
 //                                      @RequestBody UserDto dto) {  //json 형태의 데이터가 받아짐

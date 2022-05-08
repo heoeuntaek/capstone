@@ -1,6 +1,8 @@
 package com.example.capstone.service;
 
 
+import com.example.capstone.entity.Group_tbl;
+import com.example.capstone.repository.GroupRepository;
 import com.example.capstone.repository.UserGroupRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +20,7 @@ public class GroupService {
     private UserGroupRepository userGroupRepository;
 
     @Autowired
-    private UserService userService;
-
-    @Autowired
-    private GroupService groupService;
+    private GroupRepository groupRepository;
 
 //    public void createGroup(GroupDto groupDto) {
 //        User user = new User();
@@ -50,5 +49,19 @@ public class GroupService {
         System.out.println(generatedString);
         return generatedString;
 
+    }
+
+    public Group_tbl UpdateMatchedSchedule(Long group_id, Group_tbl group_tbl) {
+        Group_tbl target_group = groupRepository.findById(group_id).orElse(null);
+        String matched_schedule = group_tbl.getMatched_schedule();
+        target_group.setMatched_schedule(matched_schedule);
+        return groupRepository.save(target_group);
+
+
+    }
+
+    public Group_tbl GetMatchedSchedule(Long group_id) {
+        Group_tbl target_group = groupRepository.findById(group_id).orElse(null);
+        return target_group;
     }
 }

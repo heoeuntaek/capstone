@@ -3,7 +3,6 @@ package com.example.capstone.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
 
 @AllArgsConstructor  //생성자
 @NoArgsConstructor  //default생성자 추가
@@ -24,7 +23,7 @@ public class Group_tbl {
     @Column
     private String group_name;
 
-    @Column
+    @Column(length = 5000)
     private String matched_schedule;
 
 //    @OneToMany(mappedBy = "group_tbl")
