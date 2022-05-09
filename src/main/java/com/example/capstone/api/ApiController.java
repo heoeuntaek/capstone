@@ -69,7 +69,7 @@ public class ApiController {
     }
 
     @PostMapping("/api/login")
-    public ResponseEntity<User> login(@RequestBody UserDto dto) {    //HTTP요청의 내용을 객체에 매핑하기 위해 @RequestBody 를 설정.
+    public ResponseEntity<User> login(@RequestBody UserDto dto) throws Exception {    //HTTP요청의 내용을 객체에 매핑하기 위해 @RequestBody 를 설정.
         User user = userService.login(dto);
         log.info("로그인 성공");
         return ResponseEntity.status(HttpStatus.OK).body(user);

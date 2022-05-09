@@ -81,9 +81,16 @@ public class UserService {
     }
 
 
-    public User login(UserDto dto) {
+    public User login(UserDto dto) throws Exception {
         //1: 수정용 엔티티 조회 dto -> entity
         User user = dto.toEntity();
+
+        User user_found = userRepository.findById(user.getId()).orElseThrow(null);
+        if (user_found==null){
+            log.info("id가 없습니다.");
+
+            throw NotFoundException("user not found");
+        }
 
 //        입력받은 id
         String user_login_id = dto.getUser_login_id();
@@ -92,10 +99,12 @@ public class UserService {
 
         // 2:Id를 이용해 db의 비번 조회
         User target = userRepository.findByUser_login_id(user.getUser_login_id());  //기존에 있던 것
-//        User target = userService.findOneByUser_id(user.getUser_id());  //기존에 있던 것
 
         // db비번
         String db_pass = target.getUser_pass();
+
+
+
 
         if (user != null) {
             if (user_pass.equals(db_pass)) {
@@ -108,6 +117,10 @@ public class UserService {
         }
         System.out.println("아이디가 없습니다.");
         return null;
+    }
+
+    private Exception NotFoundException(String user_not_found) {
+        return new Exception(user_not_found);
     }
 
 
@@ -146,10 +159,18 @@ public class UserService {
         User findUser = userRepository.findById(user_id).orElse(null);
         Group_tbl findGroup = groupRepository.findByGroup_code(group_code);
 
-        User_group user_group = new User_group();
-        user_group.setUser(findUser);
-        user_group.setGroup_tbl(findGroup);
-        return userGroupRepository.save(user_group);
+        User_group find_user_group = userGroupRepository.findByuser_idAndGroupId(user_id,findGroup.getId());
+        if(find_user_group != null){
+            return null;
+        }
+
+        if (findGroup != null) {
+            User_group user_group = new User_group();
+            user_group.setUser(findUser);
+            user_group.setGroup_tbl(findGroup);
+            return userGroupRepository.save(user_group);
+        }
+        return null;
 
     }
 
