@@ -85,15 +85,18 @@ public class UserService {
         //1: 수정용 엔티티 조회 dto -> entity
         User user = dto.toEntity();
 
-        User user_found = userRepository.findById(user.getId()).orElseThrow(null);
-        if (user_found==null){
+        User user_found = userRepository.findByUser_login_id(user.getUser_login_id());
+        if (user_found==null) {
             log.info("id가 없습니다.");
 
+
             throw NotFoundException("user not found");
+
+
         }
 
 //        입력받은 id
-        String user_login_id = dto.getUser_login_id();
+        String user_login_id = user.getUser_login_id();
 //        입력받은 비번
         String user_pass = user.getUser_pass();
 
