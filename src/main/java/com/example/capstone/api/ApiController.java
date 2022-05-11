@@ -166,6 +166,7 @@ public class ApiController {
         log.info("스케줄 리스트 조회 성공{}", schedules.toString());
         return ResponseEntity.status(HttpStatus.OK).body(schedules);
     }
+
     //
     @PatchMapping("api/group/matchedSchedule/{group_id}")
     public ResponseEntity<Group_tbl> UpdateMatchedSchedule(@PathVariable Long group_id, @RequestBody Group_tbl group_tbl) {
@@ -178,6 +179,14 @@ public class ApiController {
     public ResponseEntity<Group_tbl> GetMatchedSchedule(@PathVariable Long group_id) {
         Group_tbl group_tbl = groupService.GetMatchedSchedule(group_id);
         return ResponseEntity.status(HttpStatus.OK).body(group_tbl);
+    }
+
+    //스케줄 삭제
+    @DeleteMapping("api/schedule/{schedule_id}")
+    public ResponseEntity<Schedule> DeleteSchedule(@PathVariable Long schedule_id) {
+        Schedule schedule = scheduleService.DeleteSchedule(schedule_id);
+        log.info("스케줄 삭제 성공{}", schedule.toString());
+        return ResponseEntity.status(HttpStatus.OK).body(schedule);
     }
 
 }

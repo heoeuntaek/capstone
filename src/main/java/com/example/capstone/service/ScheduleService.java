@@ -81,4 +81,10 @@ public class ScheduleService {
         List<Schedule> schedule_list = scheduleRepository.findByGroup_id(group_id);
         return schedule_list;
     }
+
+    public Schedule DeleteSchedule(Long schedule_id) {
+        Schedule schedule = scheduleRepository.findById(schedule_id).orElse(null);
+        scheduleRepository.delete(schedule);
+        return schedule;
+    }
 }
