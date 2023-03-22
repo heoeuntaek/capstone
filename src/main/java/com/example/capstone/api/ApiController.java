@@ -18,10 +18,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Slf4j
+//로깅 동작에 대한 역할을 수행할 추상 메서드를 제공
 @RestController
+//rest api 제공
 public class ApiController {
 
     @Autowired
+//    필요한 의존 객체의 “타입"에 해당하는 빈을 찾아 주입
     private UserService userService;
 
     @Autowired
