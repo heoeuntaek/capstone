@@ -17,7 +17,7 @@ public class Group_tbl {
     @Column(name = "group_id")
     private Long id;
 
-    @Column (unique = true)
+    @Column(unique = true)
     private String group_code;
 
     @Column

@@ -64,6 +64,7 @@ public class ApiController {
     public ResponseEntity<User> userRegister(@RequestBody UserDto dto) {
         User created = userService.userRegister(dto);
         return ResponseEntity.status(HttpStatus.OK).body(created);
+        //오류가 났을 경우 오류 코드 반환
     }
 
     @PostMapping("/api/group")
@@ -73,11 +74,13 @@ public class ApiController {
     }
 
     @SneakyThrows
+//    Java에서 메서드 선언부에 Throws 를 정의하지 않고도, 검사 된 예외를 Throw 할 수 있도록 하는 Lombok 에서 제공하는 어노테이션입니다.
     @PostMapping("/api/login")
     public ResponseEntity<User> login(@RequestBody UserDto dto) {    //HTTP요청의 내용을 객체에 매핑하기 위해 @RequestBody 를 설정.
         User user = userService.login(dto);
         log.info("로그인 성공");
         return ResponseEntity.status(HttpStatus.OK).body(user);
+
     }
 
     //그룹생성 - UserGroup에 user_id, group_id 넣기

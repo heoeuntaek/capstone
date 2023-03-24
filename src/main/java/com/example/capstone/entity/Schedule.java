@@ -10,7 +10,7 @@ import javax.persistence.*;
 @ToString
 @Getter
 @Setter
-@Table (name = "schedule")
+@Table(name = "schedule")
 @Entity  //DB가 해당 객체 인식 가능   (해당 클래스로 테이블을 만듬)
 public class Schedule {
     @Id  //대표값 like 주민번호

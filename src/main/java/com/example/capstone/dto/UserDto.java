@@ -15,7 +15,7 @@ import lombok.*;
 public class UserDto {
 
     private Long id;
-//    user의 고유 id
+    //    user의 고유 id
     private String user_login_id;
     //user의 login id
     private String user_pass;

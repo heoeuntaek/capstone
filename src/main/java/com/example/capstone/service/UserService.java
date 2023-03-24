@@ -39,6 +39,7 @@ public class UserService {
     public User findbyId(Long id) {
         log.info("정보 {}", userRepository.findById(id));
         return userRepository.findById(id).orElse(null);  //객체 하나 반환
+        // orElse - 찾는 아이디가 없다면 null 반환
 
     }
 

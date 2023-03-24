@@ -22,6 +22,4 @@ public interface UserGroupRepository extends CrudRepository<User_group, Long> {
     User_group findByuser_idAndGroupId(@Param("user_id") Long user_id, @Param("group_id") Long group_id);
 
 
-
-
 }
