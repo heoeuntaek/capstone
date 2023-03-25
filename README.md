@@ -25,6 +25,7 @@
 
 
 ![캡스톤](https://user-images.githubusercontent.com/80875005/227667478-32a4c00f-e60a-4f20-b8e2-6e20d7dc7f70.gif)
+
 구현영상
 <br/><br/>
 
