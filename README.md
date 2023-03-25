@@ -17,12 +17,17 @@
 
 ![슬라이드5](https://user-images.githubusercontent.com/80875005/227515796-88a2a20c-181e-426e-8413-bbab0187fb6f.JPG)
 
+
 <br/>
 
 ![슬라이드6](https://user-images.githubusercontent.com/80875005/227515798-0e6fc3d6-0cdc-49ca-9e83-acc2e7a24c05.JPG)
 
-영상
-<br/>
+
+
+![캡스톤](https://user-images.githubusercontent.com/80875005/227667478-32a4c00f-e60a-4f20-b8e2-6e20d7dc7f70.gif)
+구현영상
+<br/><br/>
+
 ![image38](https://user-images.githubusercontent.com/80875005/227517134-22e6d198-2c79-431a-a560-d56cb1a10c5c.png)
 <br/>
 
