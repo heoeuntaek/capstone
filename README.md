@@ -9,12 +9,12 @@
 
 1. **REST API** 개발
 
-  그룹 생성 및 참가 API 구현<br>
-  스케줄 작성, 공유, 매칭 API 구현
+  &nbsp그룹 생성 및 참가 API 구현<br>
+ &nbsp 스케줄 작성, 공유, 매칭 API 구현
 
 2. 서버 세팅 및 담당
 
-  `RDS(Aurora)` 사용해`AWS EC2` 배포, 
+  &nbsp`RDS(Aurora)` 사용해`AWS EC2` 배포, 
 
 
 **문제1**
