@@ -2,10 +2,10 @@
 
 
 **기간**
-2022.03~2022.06 <br>
+2022.03~2022.06 <br><br>
 
 **역할**
-허은택(본인)<br>
+허은택(본인)<br><br>
 
 1. **REST API** 개발
 
@@ -35,7 +35,7 @@
 
 → DTO 사용 
 
-( Entity 자체를 return 하지 않고 DTO 객체를 만들어 필요한 데이터만 옮겨담아 return) <br>
+( Entity 자체를 return 하지 않고 DTO 객체를 만들어 필요한 데이터만 옮겨담아 return) <br><br>
 
 **배운것**
 1. Spring boot MVC, REST API
@@ -43,14 +43,14 @@
 3. EC2 Spring boot jar 배포
 4. Retrofit API 학습 및 적용
 5. Git을 활용한 협업 방법
-<br>
+<br><br>
 
 **느낀점**
 1. 앱을 개발하는 과정에서 생각한 아이디어가 실제로 구현되는 순간에 큰 흥미와 함께 성취감을 느낄 수 있었다. 이 경험이 어렵다고 생각했던 개발에 대한 흥미를 본격적으로 갖게 된 계기가 되었다.
 <br>
 ![슬라이드1](https://user-images.githubusercontent.com/80875005/227515787-7a98ee0b-40a4-460b-abfc-e66ce80ccacd.JPG)
 ### 서로 다른 스케쥴 때문에 미팅 시간을 잡기 어려워 하는 사람들에게 각자의 스케줄을 매칭해 미팅가능한 시간을 직관적으로 보여줍니다.
-<br/> <br/>
+<br/> <br/><br>
 
 ![슬라이드2](https://user-images.githubusercontent.com/80875005/227515788-2e897452-920c-4f72-8113-4b282af2de2a.JPG)
 <br/>
