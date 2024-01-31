@@ -1,4 +1,4 @@
-# 언제만나?
+![image](https://github.com/heoeuntaek/capstone-spring/assets/80875005/0041d795-86de-47bd-9bc7-a9be0d017d99)# 언제만나?
 
 
 **기간**
@@ -45,15 +45,13 @@ RDS(Mysql) 사용해 jar 파일 AWS EC2 에 배포
 1. 앱을 개발하는 과정에서 생각한 아이디어가 실제로 구현되는 순간에 큰 흥미와 함께 성취감을 느낄 수 있었다. 이 경험이 어렵다고 생각했던 개발에 대한 흥미를 본격적으로 갖게 된 계기가 되었다.
 <br>
 
-![슬라이드1](https://user-images.githubusercontent.com/80875005/227515787-7a98ee0b-40a4-460b-abfc-e66ce80ccacd.JPG)
-### 서로 다른 스케쥴 때문에 미팅 시간을 잡기 어려워 하는 사람들에게 각자의 스케줄을 매칭해 미팅가능한 시간을 직관적으로 보여줍니다.
+
+![슬라이드3](https://github.com/heoeuntaek/capstone-spring/assets/80875005/73d43676-2657-4ca4-814b-7e4d4e9a3a62)
+### 멘토링, 스터디, 대외활동, 회사의 프로젝트까지 세상엔 많은 그룹이 있는데 멤버들과 미팅 시간을 맞추기가 어려웠던 경험이 한번쯤은 있었을 것이라고 예상이 됩니다. 그럴 때 미팅에 참여하는 사람들의 스케줄을 매칭해 최적의 미팅시간을 제시해주는 앱이 있으면 좋겠다고 생각해서 이 앱을 개발하고자 했습니다.
+![image](https://github.com/heoeuntaek/capstone-spring/assets/80875005/7392497e-efc9-4bfa-a74a-316ade3fd77b)
+
 <br/> <br/><br>
 
-![슬라이드2](https://user-images.githubusercontent.com/80875005/227515788-2e897452-920c-4f72-8113-4b282af2de2a.JPG)
-<br/>
-
-![슬라이드3](https://user-images.githubusercontent.com/80875005/227515791-e0aee72f-9e12-456d-a67b-8a58536cf574.JPG)
-<br/> <br/>
 
 ![슬라이드4](https://user-images.githubusercontent.com/80875005/227515793-30722de4-73a8-4eb3-80ba-e7df983bc63a.JPG)
 ### 멘토링, 스터디, 대외활동, 회사의 프로젝트까지 우리는 다양한 그룹에 속해 있는데 서로 다른 스케줄 때문에 멤버들과 미팅 시간을 잡기가 어려웠던 경험이 한번쯤은 있었을 것이다. 그럴 때 미팅에 참여하는 사람들의 스케줄을 매칭해 최적의 미팅시간을 제시해준다.
