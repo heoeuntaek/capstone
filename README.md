@@ -60,7 +60,7 @@ RDS(Mysql) 사용해 jar 파일 AWS EC2 에 배포
 스케줄 공유: 사용자는 자신의 스케줄을 그룹과 공유할 수 있다.
 스케줄 매칭: 그룹원들과의 스케줄을 매칭하여 최적의 미팅 시간을 추천 받을 수 있다.
 
-
+<br/><br/>
 ![슬라이드6](https://github.com/heoeuntaek/capstone-spring/assets/80875005/95a576be-170b-41be-9202-e3c51ddd9938)
 
 
