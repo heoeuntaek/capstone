@@ -14,7 +14,7 @@
 
 2. 서버 세팅 및 담당
 
-   `RDS(Aurora)` 사용해`AWS EC2` 배포, 
+RDS(Mysql) 사용해 jar 파일 AWS EC2 에 배포
 
 
 **문제1**
@@ -37,9 +37,8 @@
 **배운것**
 1. Spring boot MVC, REST API
 2. JPA 이용한 DB 연관관계 매핑
-3. EC2 Spring boot jar 배포
-4. Retrofit API 학습 및 적용
-5. Git을 활용한 협업 방법
+3. Retrofit API 학습 및 적용
+4. Git을 활용한 협업 방법
 <br><br>
 
 **느낀점**
