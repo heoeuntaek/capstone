@@ -67,10 +67,6 @@ RDS(Mysql) 사용해 jar 파일 AWS EC2 에 배포
 ![슬라이드6](https://user-images.githubusercontent.com/80875005/227515798-0e6fc3d6-0cdc-49ca-9e83-acc2e7a24c05.JPG)
 
 
-
-![캡스톤](https://user-images.githubusercontent.com/80875005/227667478-32a4c00f-e60a-4f20-b8e2-6e20d7dc7f70.gif)
-
-구현영상
 <br/><br/>
 
 ![image38](https://user-images.githubusercontent.com/80875005/227517134-22e6d198-2c79-431a-a560-d56cb1a10c5c.png)
@@ -92,3 +88,9 @@ RDS(Mysql) 사용해 jar 파일 AWS EC2 에 배포
 ![image41](https://user-images.githubusercontent.com/80875005/227517151-ec294179-3e6f-48cb-bbbf-ca34dd472c02.png)
 
 스케줄 매칭
+
+
+<br/><br/>
+![캡스톤](https://user-images.githubusercontent.com/80875005/227667478-32a4c00f-e60a-4f20-b8e2-6e20d7dc7f70.gif)
+
+구현영상
